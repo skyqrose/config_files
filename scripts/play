@@ -1,0 +1,16 @@
+#!/bin/zsh
+#shuffle the music in the provided directory, using mpg123
+
+if [ "$1" = "" ]
+    then
+    dir="."
+else
+    dir="$1"
+fi
+
+dir=`realpath "$dir"`
+
+find "$dir" -regex '.*\.\(mp3\|ogg\)' > /tmp/mpg123_playlist.txt
+mpg123 -C -Z --list /tmp/mpg123_playlist.txt
+
+#find "$dir" -print0 -regex '.*\.\(mp3\|ogg\)' | xargs -0 mplayer -shuffle

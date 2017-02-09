@@ -1,0 +1,18 @@
+# Settings for my personal comuter
+
+PATH=/data/config_files/scripts/:$PATH
+
+#Get rid of sudo for some commands
+alias shutdown='sudo shutdown now'
+alias reboot='sudo reboot'
+alias slep='sudo systemctl suspend'
+
+alias show=sxiv #sxiv is a lot of letters to remember...
+
+alias pingg='ping -c 1 www.google.com'
+alias pinggg='while :; do if pingg; then break; else sleep 2; fi; done' #Wait until connection is established.
+
+alias screenshot="scrot -e 'mv \$f /data/Dropbox/Pictures/screenshots/'"
+
+export EDITOR="vim"
+export BROWSER="chromium"

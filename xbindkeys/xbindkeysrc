@@ -1,0 +1,17 @@
+# Increase volume
+"/data/config_files/xbindkeys/sound.sh up"
+    XF86AudioRaiseVolume
+
+# Decrease volume
+"/data/config_files/xbindkeys/sound.sh down"
+    XF86AudioLowerVolume
+
+# Toggle mute
+"/data/config_files/xbindkeys/sound.sh mute"
+    XF86AudioMute
+
+"/data/config_files/xbindkeys/brightness.sh inc"
+    XF86MonBrightnessUp
+
+"/data/config_files/xbindkeys/brightness.sh dec"
+    XF86MonBrightnessDown

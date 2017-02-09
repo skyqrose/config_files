@@ -1,0 +1,8 @@
+youtube-dl \
+--format bestaudio \
+--extract-audio \
+--audio-format m4a \
+--audio-quality 192K \
+--output "%(title)s.%(ext)s" \
+--postprocessor-args "-strict -2" \
+"https://www.youtube.com/watch?v=$1"

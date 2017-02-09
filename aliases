@@ -1,0 +1,80 @@
+#auto colors
+alias grep='grep --color=auto'
+alias ls='ls --color=auto'
+alias diff=colordiff
+
+alias more=less
+alias vi=vim
+
+#make the whole heirarchy at once
+alias mkdir='mkdir -p -v'
+
+# safety
+alias mv='mv -iv'
+alias rm='rm -Iv --one-file-system --preserve-root'
+alias cp='cp -iR' #also recursive
+alias ln='ln -i'
+
+#human readable:
+alias df='df -h'
+alias du='du -c -h'
+
+# ls
+alias ls='ls -hFH --color=auto'
+alias lr='ls -R'     # recursive ls
+alias ll='ls -goh'
+alias la='ll -A'
+alias lz='ll -rS'    # sort by size
+alias lt='ll -rt'    # sort by date
+alias l.='ll -d .*'
+
+#common typos
+alias cd..='cd ..'
+alias mkidr='mkdir'
+
+# git
+alias g='git'
+alias gb='git branch'
+alias gaa='git add -A'
+alias gs='git status'
+alias gp='git pull'
+alias gd='git diff'
+alias gcm='git commit'
+alias gco='git checkout'
+alias gl='git lg'
+
+# cd and ls in one
+cl() {
+    dir=$1
+    if [[ -z "$dir" ]]; then
+        dir=$HOME
+    fi
+    if [[ -d "$dir" ]]; then
+        cd "$dir"
+        ls
+    else
+        echo "bash: cl: '$dir': Directory not found"
+    fi
+}
+
+# mkdir and cd in one
+function mkcd {
+  if [ ! -n "$1" ]; then
+    echo "mkcd: Enter a directory name"
+  elif [ -d $1 ]; then
+    echo "mkcd: \`$1' already exists"
+  else
+    mkdir $1 && cd $1
+  fi
+}
+
+# Let sudo use aliases
+alias sudo='sudo '
+
+alias ":w"="echo This isn\'t vim, silly."
+alias ":q"="echo This isn\'t vim, silly."
+alias ":wq"="echo This isn\'t vim, silly."
+
+function texc {
+  pdflatex -halt-on-error -file-line-error -output-directory=$(dirname "$1") "$1"
+}

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+USAGE="USAGE: wget_mp3 targeturl localfolder"
+
+if [ "$#" -ne 2 ]; 
+    then
+        echo $#
+        echo $0
+        echo $1
+        echo $2
+        echo $USAGE
+        exit 1
+fi
+
+cd "$2"
+
+wget -mr -e robots=off -np "$1" --accept mp3
