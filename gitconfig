@@ -1,19 +1,19 @@
 [alias]
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
-    b = branch
-    s = status
-    d = diff
-    aa = add -A
-    cm = commit
-    co = checkout
-    hide = update-index --assume-unchanged
-    unhide = update-index --no-assume-unchanged
-    hidden = !git ls-files -v | grep "^[[:lower:]]"
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+  b = branch
+  s = status
+  d = diff
+  aa = add -A
+  cm = commit
+  co = checkout
+  hide = update-index --assume-unchanged
+  unhide = update-index --no-assume-unchanged
+  hidden = !git ls-files -v | grep "^[[:lower:]]"
 [user]
-	email = sky.q.rose@gmail.com
-	name = Sky Rose
+  email = sky.q.rose@gmail.com
+  name = Sky Rose
 [push]
-	default = simple
+  default = simple
 [core]
-	editor = vim
-	excludesfile = /data/config_files/gitignore_global
+  editor = vim
+  excludesfile = /data/config_files/gitignore_global
