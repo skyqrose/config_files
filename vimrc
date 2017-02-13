@@ -58,6 +58,16 @@ nnoremap <down> gj
 vnoremap <up> gk
 vnoremap <down> gj
 
+" use C-j/C-k in autocomplete lists
+" can't use j/k because jj/kk are Esc.
+inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("<C-j>"))
+inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("<C-k>"))
+
+" use H/L to jump to beginning and end of line
+" (ctrl-D and ctrl-U are better than H/L)
+nnoremap H ^
+nnoremap L $
+
 " Leader
 let mapleader = " "
 nnoremap <silent> <leader>w :w<CR>
