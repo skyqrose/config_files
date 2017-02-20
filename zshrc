@@ -2,7 +2,7 @@ source /data/config_files/aliases
 source /data/config_files/sky_shrc
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE=~/.config/zsh_histfile
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory autocd extendedglob nomatch notify
@@ -15,6 +15,20 @@ zstyle :compinstall filename '/home/$USER/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+# History
+# http://zsh.sourceforge.net/Doc/Release/Functions.html
+zsh_command_log=~/.config/zsh_command_log
+function log_command() {
+  directory=$(pwd | sed -e 's/^\/home\//\~/')
+  echo $(date +%y/%m/%d\ %H:%M:%S) "$directory" "$1" >> $zsh_command_log
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook preexec log_command
+function histgrep() {
+  grep $* $zsh_command_log
+}
+
 
 # The prompt
 autoload -U colors && colors #enable colors
