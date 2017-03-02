@@ -121,14 +121,14 @@ function make_text_widget(script_path, refresh_time_seconds)
         new_widget:set_text(run_script(script_path))
     end
     update_widget()
-    local widget_timer = timer({ timeout = 30 })
+    local widget_timer = timer({ timeout = refresh_time_seconds })
     widget_timer:connect_signal("timeout", update_widget)
     widget_timer:start()
     return new_widget
 end
 
 battery_widget = make_text_widget("/data/config_files/scripts/battery_status.sh", 15)
-volume_widget = make_text_widget("/data/config_files/scripts/volume_status.sh", 5)
+volume_widget = make_text_widget("/data/config_files/scripts/volume_status.sh", 3)
 --]]
 
 --}}}
