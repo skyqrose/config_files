@@ -1,0 +1,45 @@
+" Get out of insert mode with shortcuts
+inoremap jj <Esc>
+inoremap kk <Esc>
+inoremap jk <Esc>
+inoremap kj <Esc>
+
+" Allow quick recording/playback with qq/Q 
+nnoremap Q @q
+
+" This keeps the current visual block selection active after changing indent with '<' or '>'.
+" Usually the visual block selection is lost after you shift it, which is incredibly annoying.
+vnoremap > >gv
+vnoremap < <gv
+
+" Copy to end of line with Y (like C or D).
+" Default is to yank whole line with Y. Now only do that with yy
+nnoremap Y y$
+
+" Use arrow keys to scroll by one displayed line. (faster gj or gk)
+inoremap <up> <C-O>gk
+inoremap <down> <C-O>gj
+nnoremap <up> gk
+nnoremap <down> gj
+vnoremap <up> gk
+vnoremap <down> gj
+
+" use H/L to jump to beginning and end of line
+" (ctrl-D and ctrl-U are better than H/L)
+nnoremap H ^
+nnoremap L $
+
+" Leader
+let mapleader = " "
+nnoremap <silent> <leader>w :w<CR>
+nnoremap <silent> <leader>q :q<CR>
+
+" Better use of enter, add an empty line after this one.
+nnoremap <CR> o<Esc>0d$
+
+" Move between windows with ctrl k and ctrl j instead of ctrl w w
+nnoremap <C-J> <C-w>w
+nnoremap <C-K> <C-w>W
+
+" make keyboard mappings timeout quicker
+set timeoutlen=300
