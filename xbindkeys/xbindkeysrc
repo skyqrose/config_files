@@ -15,3 +15,12 @@
 
 "/data/config_files/xbindkeys/brightness.sh dec"
     XF86MonBrightnessDown
+
+"/data/config_files/scripts/projector reset"
+    XF86Display
+
+"/data/config_files/scripts/projector hdmi extend"
+    XF86LaunchA
+
+"/data/config_files/scripts/projector hdmi only"
+    XF86Explorer

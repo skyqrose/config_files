@@ -63,7 +63,7 @@ case $# in
         case `lower $2` in
             $EXTENDCOMMAND)
                 echo "set $EXTOUTPUT to extend"
-                echo "Not supported yet"
+                xrandr --output $SCREENOUTPUT --auto --output $EXTOUTPUT --auto --right-of $SCREENOUTPUT
                 ;;
             $DUPLICATECOMMAND)
                 echo "set $EXTOUTPUT to duplicate"
