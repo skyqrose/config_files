@@ -24,7 +24,7 @@ function biggest() {
 # ls
 alias ls='ls -hFH --color=auto'
 alias lr='ls -R'     # recursive ls
-alias ll='ls -goh'
+alias ll='ls -lh'
 alias la='ll -A'
 alias lz='ll -rS'    # sort by size
 alias lt='ll -rt'    # sort by date
