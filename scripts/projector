@@ -21,6 +21,10 @@ lower() {
     tr '[:upper:]' '[:lower:]' <<<"$*"
 }
 
+restartawesome() {
+  pkill --signal SIGHUP awesome
+}
+
 fail() {
     echo "USAGE:"
     echo "$TOOLNAME $RESETCOMMAND"
@@ -48,6 +52,7 @@ case $# in
                 turnon $SCREENOUTPUT
                 turnoff $HDMIOUTPUT
                 turnoff $VGAOUTPUT
+                restartawesome
                 exit 0
                 ;;
             $VGACOMMAND)
@@ -64,16 +69,19 @@ case $# in
             $EXTENDCOMMAND)
                 echo "set $EXTOUTPUT to extend"
                 xrandr --output $SCREENOUTPUT --auto --output $EXTOUTPUT --auto --right-of $SCREENOUTPUT
+                restartawesome
                 ;;
             $DUPLICATECOMMAND)
                 echo "set $EXTOUTPUT to duplicate"
                 turnon $SCREENOUTPUT
                 turnon $EXTOUTPUT
+                restartawesome
                 ;;
             '' | $ONLYCOMMAND)
                 echo "set $EXTOUTPUT to only"
                 turnoff $SCREENOUTPUT
                 turnon $EXTOUTPUT
+                restartawesome
                 ;;
             *)
                 fail
