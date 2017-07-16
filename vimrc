@@ -73,7 +73,7 @@ let mapleader = " "
 nnoremap <silent> <leader>w :w<CR>
 nnoremap <silent> <leader>q :q<CR>
 nnoremap <silent> <leader>m :w<CR> :!make<CR>
-nnoremap <silent> <leader>p :w<CR> :!python2.7 %<CR>
+nnoremap <silent> <leader>p :w<CR> :!python %<CR>
 nnoremap <silent> <leader>l :w<CR> :!pdflatex -halt-on-error -file-line-error -output-directory=$(dirname %) %<CR>
 nnoremap <silent> <leader>h :w<CR> :!ghc %<CR>
 
