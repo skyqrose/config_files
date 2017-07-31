@@ -1,5 +1,4 @@
-source /data/config_files/aliases
-source /data/config_files/sky_shrc
+source ~sky/txt/config_files/aliases
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.config/zsh_histfile

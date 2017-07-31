@@ -16,4 +16,4 @@
   default = simple
 [core]
   editor = vim
-  excludesfile = /data/config_files/gitignore_global
+  excludesfile = ~sky/txt/config_files/gitignore_global

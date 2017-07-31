@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-config_files=/data/config_files
+config_files=~sky/txt/config_files
 
 source $config_files/aliases
 source $config_files/sky_shrc
