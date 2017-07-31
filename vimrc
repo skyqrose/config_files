@@ -6,13 +6,6 @@ set backspace=indent,eol,start
 set ruler
 set number
 
-" Enable filetype detection and syntax hilighting
-syntax on
-filetype on
-filetype indent on
-filetype plugin on
-filetype plugin indent on
-
 " Show multicharacter commands as they are being typed
 set showcmd
 
@@ -119,6 +112,7 @@ let g:tex_flavor='latex'
 " git clone https://github.com/gmarik/Vundle.vim
 " vim +PluginInstall +qall
 set rtp+=~/.vim/bundle/Vundle.vim
+filetype off
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized' " solarized
@@ -127,8 +121,10 @@ Plugin 'scrooloose/nerdtree'              " nerdtree
 Plugin 'jistr/vim-nerdtree-tabs'          " nerdtree
 Plugin 'airblade/vim-gitgutter'           " gitgutter
 Plugin 'tpope/vim-surround'               " surround
+Plugin 'elixir-lang/vim-elixir'           " elixir
 call vundle#end()
 filetype plugin indent on
+syntax on
 
 " solarized (colorscheme)
 set background=dark
