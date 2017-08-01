@@ -90,17 +90,11 @@ cnoremap w!! w !sudo tee % > /dev/null
 " make keyboard mappings timeout quicker
 set timeoutlen=300
 
-" Turn the mouse on (at least in xterm).
+" Turn the mouse on.
 " Can highlight without grabbing line numbers,
-" Can click to move the cursor.
-" Can scroll
-" You probably only want this on if vim was compiled with xterm_clipboard,
-" or else it's hard to copy out of vim.
-" set mouse=a
-
-" If I'm writing TeX, it's LaTeX
-" I don't know what this changes, though.
-let g:tex_flavor='latex'
+" Can click to move the cursor,
+" Can scroll,
+set mouse=a
 
 " TODO
 " code folding

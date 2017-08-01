@@ -1,4 +1,5 @@
 source ~sky/txt/config_files/aliases
+source ~sky/txt/config_files/mbta_rc
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.config/zsh_histfile
@@ -8,6 +9,7 @@ setopt appendhistory autocd extendedglob nomatch notify
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
+zstyle ':completion:*:*:git:*' script ~/.zsh/__git/git-completion.zsh
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/$USER/.zshrc'
 

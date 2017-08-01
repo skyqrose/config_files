@@ -1,0 +1,9 @@
+source /Users/sky/txt/config_files/mbta_secret
+
+function exgrep {
+  find "$1" | grep  '\.\(ex\|exs\|eex\)$'| grep -v node_modules | grep -v '/test/' | xargs grep "${@:2}"
+}
+function exgrept {
+  # .ex, .exs, and .eex
+  find "$1" | grep  '\.\(ex\|exs\|eex\)$'| grep -v node_modules | grep '/test/' | xargs grep "${@:2}"
+}
