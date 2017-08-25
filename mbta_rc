@@ -1,8 +1,24 @@
 source /Users/sky/txt/config_files/mbta_secret
 
-function exgrep {
-  find "$1" | grep  '\.\(ex\|exs\|eex\)$'| grep -v node_modules | grep -v '/test/' | xargs grep "${@:2}"
+function find_source_files {
+  find "$1"\
+    -not -path '*/node_modules/*'\
+    -not -path '*/_build/*'\
+    -not -path '*/priv/static/*'\
+    -not -path '*/backstop_data/*'\
+    -type f -a \( -false\
+      -o -name "*.ex"\
+      -o -name "*.exs"\
+      -o -name "*.eex"\
+      -o -name "*.js"\
+      -o -name "*.scss"\
+    \)
 }
+
+function exgrep {
+  find_source_files "$1" | xargs ggrep --color=always "${@:2}"
+}
+
 function exgrept {
   # .ex, .exs, and .eex
   find "$1" | grep  '\.\(ex\|exs\|eex\)$'| grep -v node_modules | grep '/test/' | xargs grep "${@:2}"

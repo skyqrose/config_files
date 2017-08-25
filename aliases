@@ -75,4 +75,5 @@ function texc {
   pdflatex -halt-on-error -file-line-error -output-directory=$(dirname "$1") "$1"
 }
 
-alias grep=ggrep
+# grep color
+alias grep=ggrep --color=always
