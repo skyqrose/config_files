@@ -12,7 +12,9 @@ function find_source_files {
       -o -name "*.eex"\
       -o -name "*.js"\
       -o -name "*.scss"\
-    \)
+      -o -name "*.json"\
+    \)\
+    -print0
 }
 
 function exgrep {
@@ -24,7 +26,7 @@ function exgrep {
     fi
     set -- $dir "$1"
   fi
-  find_source_files "$1" | xargs ggrep --color=always "${@:2}"
+  find_source_files "$1" | xargs -0 ggrep --color=always "${@:2}"
 }
 
 function exgrept {
