@@ -17,3 +17,7 @@
 [core]
   editor = vim
   excludesfile = /data/config_files/gitignore_global
+[merge]
+  conflictstyle = diff3
+[rerere]
+  enabled = 1
