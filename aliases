@@ -33,11 +33,11 @@ alias g='git'
 alias gb='git branch'
 alias gaa='git add -A'
 alias gs='git status'
-alias gp='git pull'
+alias gp='git pull --prune'
 alias gd='git diff'
 alias gcm='git commit'
 alias gco='git checkout'
-alias gl='git lg'
+alias gl='git lg | head'
 
 # cd and ls in one
 cl() {
@@ -77,3 +77,5 @@ function texc {
 
 # grep color
 alias grep=ggrep --color=always
+
+alias rg="rg -g '!__files'"
