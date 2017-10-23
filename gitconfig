@@ -13,7 +13,7 @@
   email = sky.q.rose@gmail.com
   name = Sky Rose
 [push]
-  default = simple
+  default = current
 [core]
   editor = vim
   excludesfile = /data/config_files/gitignore_global
