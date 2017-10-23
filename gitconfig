@@ -14,7 +14,7 @@
   email = sky@mbtace.com
   name = Sky Rose
 [push]
-  default = simple
+  default = current
 [core]
   editor = vim
   excludesfile = ~sky/txt/config_files/gitignore_global

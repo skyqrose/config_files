@@ -37,7 +37,7 @@ alias gp='git pull --prune'
 alias gd='git diff'
 alias gcm='git commit'
 alias gco='git checkout'
-alias gl='git lg | head'
+alias gl='git lg -n 10'
 
 # cd and ls in one
 cl() {
