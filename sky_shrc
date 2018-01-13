@@ -13,7 +13,7 @@ alias pingg='while :; do if ping -c 1 www.google.com; then break; else sleep 2; 
 
 alias screenshot="scrot -e 'mv \$f /data/Dropbox/Pictures/screenshots/'"
 
-alias wificycle="connmanctl disable wifi; connmanctl enable wifi"
+alias wificycle="systemctl restart connman.service && connmanctl disable wifi && connmanctl enable wifi"
 
 export EDITOR="vim"
 export BROWSER="chromium"
