@@ -42,3 +42,5 @@ punctuation='%F{blue}%#%f '
 PROMPT=$'\n'"$name_if_privileged$pink_on_fail$time$num_jobs$pink_on_fail$dir$punctuation"
 
 RPROMPT='%0(?..[%F{yellow}%?%f])' # [$?] on failure
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
