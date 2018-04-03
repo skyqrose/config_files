@@ -10,6 +10,7 @@ a.out
 *.iml
 .*.swp
 .swp
+.elixir_ls
 # I could add .swo files, but I'd rather let git status yell at me if I accidentally make one.
 
 #LaTeX
@@ -20,3 +21,6 @@ a.out
 #haskell
 *.o
 *.hi
+
+#configuration
+.elasticbeanstalk/
