@@ -42,6 +42,6 @@ alias statictest="pronto run -c origin/master && mix dialyzer"
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 alias elm-make-glides="cd ~sky/code/glides/assets/elm && \
-elm-make --output ../vendor/main.js src/Main.elm;\
+elm-make --debug --output ../vendor/main.js src/Main.elm;\
 cd -"
 
