@@ -11,8 +11,8 @@
   unhide = update-index --no-assume-unchanged
   hidden = !git ls-files -v | grep "^[[:lower:]]"
 [user]
-  email = sky@mbtace.com
-  name = Sky Rose
+	email = sky@mbtace.com
+	name = Sky Rose
 [push]
   default = current
 [core]
@@ -22,3 +22,8 @@
   conflictstyle = diff3
 [rerere]
   enabled = 1
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
