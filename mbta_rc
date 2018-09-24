@@ -35,13 +35,6 @@ function exgrept {
 }
 
 alias timesheet="vim ~/txt/timesheet"
-alias server="mix phx.server"
-alias statictest="pronto run -c origin/master && mix dialyzer"
-alias webpackdev="webpack --config webpack.dev.config.js"
 
 # enable history in iex
 export ERL_AFLAGS="-kernel shell_history enabled"
-
-alias elm-make-glides="cd ~sky/code/glides/assets/elm && \
-elm-make --debug --warn --output ../vendor/main.js src/Main.elm;\
-cd -"
