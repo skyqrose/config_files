@@ -44,6 +44,12 @@ alias gd='git diff'
 alias gcm='git commit'
 alias gco='git checkout'
 alias gl='git lg -n 10'
+function gst() {
+  cmd="git stash $2 $3 $4 stash@{$1}"
+  echo $cmd
+  $(echo $cmd)
+}
+
 
 # cd and ls in one
 cl() {
