@@ -127,6 +127,7 @@ Plugin 'scrooloose/nerdtree'              " nerdtree
 Plugin 'jistr/vim-nerdtree-tabs'          " nerdtree
 Plugin 'airblade/vim-gitgutter'           " gitgutter
 Plugin 'tpope/vim-surround'               " surround
+Plugin 'elmcast/elm-vim'
 call vundle#end()
 filetype plugin indent on
 
