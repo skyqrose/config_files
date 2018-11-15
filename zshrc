@@ -26,7 +26,7 @@ function log_command() {
 autoload -Uz add-zsh-hook
 add-zsh-hook preexec log_command
 function histgrep() {
-  grep $* $zsh_command_log
+  grep --text $* $zsh_command_log
 }
 
 
