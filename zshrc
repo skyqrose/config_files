@@ -21,7 +21,7 @@ compinit
 zsh_command_log=~/.config/zsh_command_log
 function log_command() {
   directory=$(pwd | sed -e 's/^\/home\//\~/')
-  echo $(date +%y/%m/%d\ %H:%M:%S) "$directory" "$1" >> $zsh_command_log
+  echo $(date +%y-%m-%d\ %H:%M:%S) "$directory" "$1" >> $zsh_command_log
 }
 autoload -Uz add-zsh-hook
 add-zsh-hook preexec log_command
