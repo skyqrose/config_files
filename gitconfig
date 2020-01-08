@@ -11,7 +11,7 @@
   unhide = update-index --no-assume-unchanged
   hidden = !git ls-files -v | grep "^[[:lower:]]"
 [user]
-  email = sky.q.rose@gmail.com
+  email = zgnomdnv@sky.skyqrose.com
   name = Sky Rose
 [push]
   default = current
