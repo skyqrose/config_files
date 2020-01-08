@@ -175,3 +175,7 @@ vn q? ?
 " Use <Esc> to exit command window
 au CmdwinEnter * nnoremap <Esc> o<CR>
 au CmdwinLeave * unmap <Esc>
+
+" disable modlines to prevent security vulnerability
+set modelines=0
+set nomodeline
