@@ -4,7 +4,8 @@ alias ls='ls --color=auto'
 alias diff=colordiff
 
 alias more=less
-alias vi=vim
+alias vi=nvim
+alias vim=nvim
 
 #make the whole heirarchy at once
 alias mkdir='mkdir -p -v'
@@ -86,3 +87,5 @@ alias ":wq"="echo This isn\'t vim, silly."
 function texc {
   pdflatex -halt-on-error -file-line-error -output-directory=$(dirname "$1") "$1"
 }
+
+alias python=python3
