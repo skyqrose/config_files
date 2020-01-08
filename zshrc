@@ -1,10 +1,10 @@
-source /data/config_files/aliases
-source /data/config_files/sky_shrc
+source ~/git/config_files/aliases
+source ~/git/config_files/sky_shrc
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.config/zsh_histfile
-HISTSIZE=10000
-SAVEHIST=10000
+unset HISTFILE
+unset HISTSIZE
+unset SAVEHIST
 setopt appendhistory autocd extendedglob nomatch notify
 unsetopt beep
 bindkey -v
