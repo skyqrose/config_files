@@ -1,8 +1,0 @@
-find ~/.steam/root/ -name "libgpg-error.so*" -print -delete
-find ~/.steam/root/ \( -name "libgcc_s.so*" -o -name "libstdc++.so*" -o -name "libxcb.so*" \) -print -delete
-find ~/.local/share/Steam/ \( -name "libgcc_s.so*" -o -name "libstdc++.so*" -o -name "libxcb.so*" \) -print -delete
-# https://bbs.archlinux.org/viewtopic.php?id=211822
-# https://bugs.archlinux.org/task/48994
-#
-# Train valley: https://forum.volo-airsport.com/t/solved-failing-to-launch-the-game-linux-locale-issue/386/7
-export LC_ALL="en_US.UTF-8"
