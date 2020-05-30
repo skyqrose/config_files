@@ -16,7 +16,7 @@
 [push]
   default = current
 [core]
-  editor = vim
+  editor = nvim
   excludesfile = /data/config_files/gitignore_global
 [merge]
   conflictstyle = diff3
