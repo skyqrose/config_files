@@ -12,6 +12,7 @@ a.out
 .swp
 .elixir_ls
 # I could add .swo files, but I'd rather let git status yell at me if I accidentally make one.
+.vscode/
 
 #LaTeX
 *.out
