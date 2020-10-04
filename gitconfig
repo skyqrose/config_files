@@ -2,10 +2,12 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
   b = branch
   s = status
+  st = stash
   d = diff
   aa = add -A
   cm = commit
   co = checkout
+  r = rebase -i
   hide = update-index --assume-unchanged
   unhide = update-index --no-assume-unchanged
   hidden = !git ls-files -v | grep "^[[:lower:]]"
@@ -13,7 +15,13 @@
   email = sky.q.rose@gmail.com
   name = Sky Rose
 [push]
-  default = simple
+  default = current
 [core]
-  editor = vim
-  excludesfile = /data/config_files/gitignore_global
+  editor = nvim
+  excludesfile = ~sky/txt/config_files/gitignore_global
+[merge]
+  conflictstyle = diff3
+[rerere]
+  enabled = 1
+[rebase]
+  autostash = true

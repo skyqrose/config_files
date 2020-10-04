@@ -5,7 +5,7 @@ alias mkdir='mkdir -p -v'
 
 # safety
 alias mv='mv -iv'
-alias rm='rm -Iv --one-file-system --preserve-root'
+alias rm='rm -v'
 alias cp='cp -iR' #also recursive
 alias ln='ln -i'
 
@@ -33,11 +33,16 @@ alias g='git'
 alias gb='git branch'
 alias gaa='git add -A'
 alias gs='git status'
-alias gp='git pull'
+alias gp='git pull --prune'
 alias gd='git diff'
 alias gcm='git commit'
 alias gco='git checkout'
-alias gl='git lg'
+alias gl='git lg -n 10'
+function gst() {
+  cmd="git stash $2 $3 $4 stash@{$1}"
+  echo $cmd
+  $(echo $cmd)
+}
 
 # cd and ls in one
 cl() {
@@ -74,3 +79,8 @@ alias ":wq"="echo This isn\'t vim, silly."
 function texc {
   pdflatex -halt-on-error -file-line-error -output-directory=$(dirname "$1") "$1"
 }
+
+# grep color
+alias grep=ggrep --color=always
+
+alias rg="rg -g '!__files'"

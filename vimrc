@@ -6,13 +6,6 @@ set backspace=indent,eol,start
 set ruler
 set number
 
-" Enable filetype detection and syntax hilighting
-syntax on
-filetype on
-filetype indent on
-filetype plugin on
-filetype plugin indent on
-
 " Show multicharacter commands as they are being typed
 set showcmd
 
@@ -97,17 +90,11 @@ cnoremap w!! w !sudo tee % > /dev/null
 " make keyboard mappings timeout quicker
 set timeoutlen=300
 
-" Turn the mouse on (at least in xterm).
+" Turn the mouse on.
 " Can highlight without grabbing line numbers,
-" Can click to move the cursor.
-" Can scroll
-" You probably only want this on if vim was compiled with xterm_clipboard,
-" or else it's hard to copy out of vim.
-" set mouse=a
-
-" If I'm writing TeX, it's LaTeX
-" I don't know what this changes, though.
-let g:tex_flavor='latex'
+" Can click to move the cursor,
+" Can scroll,
+set mouse=a
 
 " TODO
 " code folding
@@ -119,25 +106,19 @@ let g:tex_flavor='latex'
 " git clone https://github.com/gmarik/Vundle.vim
 " vim +PluginInstall +qall
 set rtp+=~/.vim/bundle/Vundle.vim
+filetype off
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized' " solarized
 Plugin 'scrooloose/syntastic'             " syntastic
 Plugin 'scrooloose/nerdtree'              " nerdtree
 Plugin 'jistr/vim-nerdtree-tabs'          " nerdtree
 Plugin 'airblade/vim-gitgutter'           " gitgutter
 Plugin 'tpope/vim-surround'               " surround
+Plugin 'elixir-lang/vim-elixir'           " elixir
 call vundle#end()
 filetype plugin indent on
+syntax on
 
-" solarized (colorscheme)
-set background=dark
-set t_Co=256
-let g:solarized_termcolors=256
-colorscheme solarized
-" Change background to black
-hi Normal ctermfg=247 ctermbg=232
-hi LineNr ctermfg=241 ctermbg=232
 hi clear SignColumn
 hi texStatement ctermbg=232
 

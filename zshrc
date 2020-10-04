@@ -1,5 +1,5 @@
-source /data/config_files/aliases
-source /data/config_files/sky_shrc
+source ~sky/txt/config_files/aliases
+source ~sky/txt/config_files/mbta_rc
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.config/zsh_histfile
@@ -21,12 +21,12 @@ compinit
 zsh_command_log=~/.config/zsh_command_log
 function log_command() {
   directory=$(pwd | sed -e 's/^\/home\//\~/')
-  echo $(date +%y/%m/%d\ %H:%M:%S) "$directory" "$1" >> $zsh_command_log
+  echo $(date +%y-%m-%d\ %H:%M:%S) "$directory" "$1" >> $zsh_command_log
 }
 autoload -Uz add-zsh-hook
 add-zsh-hook preexec log_command
 function histgrep() {
-  grep $* $zsh_command_log
+  grep --text $* $zsh_command_log
 }
 
 
