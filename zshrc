@@ -2,9 +2,9 @@ source ~sky/txt/config_files/aliases
 source ~sky/txt/config_files/mbta_rc
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.config/zsh_histfile
-HISTSIZE=10000
-SAVEHIST=10000
+unset HISTFILE
+unset HISTSIZE
+unset SAVEHIST
 setopt appendhistory autocd extendedglob nomatch notify
 unsetopt beep
 bindkey -v

@@ -4,7 +4,7 @@ inoremap kk <Esc>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
-" Allow quick recording/playback with qq/Q 
+" Allow quick recording/playback with qq/Q
 nnoremap Q @q
 
 " This keeps the current visual block selection active after changing indent with '<' or '>'.
