@@ -38,3 +38,5 @@ alias timesheet="vim ~/txt/timesheet"
 
 # enable history in iex
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+alias server='env `cat .env` mix phx.server'

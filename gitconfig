@@ -1,5 +1,6 @@
 [alias]
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+  lgrelease = log --pretty=format:'%h %s' --abbrev-commit
   b = branch
   s = status
   st = stash
@@ -7,6 +8,7 @@
   aa = add -A
   cm = commit
   co = checkout
+  r = rebase -i
   hide = update-index --assume-unchanged
   unhide = update-index --no-assume-unchanged
   hidden = !git ls-files -v | grep "^[[:lower:]]"
