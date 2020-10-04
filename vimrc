@@ -109,7 +109,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 filetype off
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized' " solarized
 Plugin 'scrooloose/syntastic'             " syntastic
 Plugin 'scrooloose/nerdtree'              " nerdtree
 Plugin 'jistr/vim-nerdtree-tabs'          " nerdtree
@@ -120,14 +119,6 @@ call vundle#end()
 filetype plugin indent on
 syntax on
 
-" solarized (colorscheme)
-set background=dark
-set t_Co=256
-let g:solarized_termcolors=256
-colorscheme solarized
-" Change background to black
-hi Normal ctermfg=247 ctermbg=232
-hi LineNr ctermfg=241 ctermbg=232
 hi clear SignColumn
 hi texStatement ctermbg=232
 
