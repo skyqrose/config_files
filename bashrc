@@ -4,7 +4,6 @@
 config_files=~/git/config_files
 
 source $config_files/aliases
-source $config_files/sky_shrc
 
 #allow autocompletion in sudo/man
 complete -cf sudo
@@ -26,6 +25,6 @@ shopt -s histappend
 
 set -o vi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
