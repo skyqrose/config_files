@@ -89,3 +89,10 @@ function texc {
 }
 
 alias python=python3
+
+function open {
+  for x in $*
+  do
+    xdg-open "$x"
+  done
+}
