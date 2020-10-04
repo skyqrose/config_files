@@ -1,4 +1,5 @@
-alias vi=vim
+alias vi=nvim
+alias vim=nvim
 
 #make the whole heirarchy at once
 alias mkdir='mkdir -p -v'
@@ -12,7 +13,7 @@ alias ln='ln -i'
 #human readable:
 alias df='df -h'
 function biggest() {
-  du "$*" | sort -nr | head -n 30
+  du -h "$*" | sort -rh | head -n 30
 }
 
 # ls

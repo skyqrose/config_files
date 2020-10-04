@@ -18,7 +18,7 @@
 [push]
   default = current
 [core]
-  editor = vim
+  editor = nvim
   excludesfile = ~sky/txt/config_files/gitignore_global
 [merge]
   conflictstyle = diff3
