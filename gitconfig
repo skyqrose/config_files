@@ -18,7 +18,7 @@
   default = current
 [core]
   editor = nvim
-  excludesfile = /data/config_files/gitignore_global
+  excludesfile = ~/git/config_files/gitignore_global
 [merge]
   conflictstyle = diff3
 [rerere]
