@@ -25,3 +25,5 @@
   enabled = 1
 [rebase]
   autostash = true
+[pull]
+  rebase = false
