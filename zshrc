@@ -1,5 +1,4 @@
-source ~sky/txt/config_files/aliases
-source ~sky/txt/config_files/mbta_rc
+source ~/git/config_files/aliases
 
 # Lines configured by zsh-newuser-install
 unset HISTFILE
@@ -10,7 +9,7 @@ unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/$USER/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -42,13 +41,6 @@ PROMPT=$'\n'"$name_if_privileged$pink_on_fail$time$num_jobs$pink_on_fail$dir$pun
 
 RPROMPT='%0(?..[%F{yellow}%?%f])' # [$?] on failure
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-. $HOME/.asdf/asdf.sh
-
-#function nvm() {
-#  echo "Loading nvm..."
-#  export NVM_DIR="$HOME/.nvm"
-#  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-#}
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

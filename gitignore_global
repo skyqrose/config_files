@@ -1,27 +1,8 @@
-#compiled code
-*.pyc
-*.o
-a.out
-.cm
-.cm/x86-unix
+# Build products
+.elixir_ls/
 
-#IDEs
-.idea/
-*.iml
+# IDEs
 .vscode/
 .*.swp
 .swp
-.elixir_ls
 # I could add .swo files, but I'd rather let git status yell at me if I accidentally make one.
-
-#LaTeX
-*.out
-*.aux
-*.log
-
-#haskell
-*.o
-*.hi
-
-#configuration
-.elasticbeanstalk/

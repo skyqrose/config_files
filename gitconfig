@@ -1,6 +1,5 @@
 [alias]
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
-  lgrelease = log --pretty=format:'%h %s' --abbrev-commit
   b = branch
   s = status
   st = stash
@@ -13,21 +12,18 @@
   unhide = update-index --no-assume-unchanged
   hidden = !git ls-files -v | grep "^[[:lower:]]"
 [user]
-	email = srose@mbta.com
-	name = Sky Rose
+  email = srose@mbta.com
+  name = Sky Rose
 [push]
   default = current
 [core]
   editor = nvim
-  excludesfile = ~sky/txt/config_files/gitignore_global
+  excludesfile = ~/git/config_files/gitignore_global
 [merge]
   conflictstyle = diff3
 [rerere]
   enabled = 1
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
 [rebase]
   autostash = true
+[pull]
+  rebase = false
