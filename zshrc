@@ -1,5 +1,4 @@
-source ~sky/txt/config_files/aliases
-source ~sky/txt/config_files/mbta_rc
+source ~/git/config_files/aliases
 
 # Lines configured by zsh-newuser-install
 unset HISTFILE
@@ -10,7 +9,7 @@ unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/$USER/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit

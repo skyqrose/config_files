@@ -1,3 +1,7 @@
+#auto colors
+alias grep='grep --color=auto'
+alias diff=colordiff
+
 alias vi=nvim
 alias vim=nvim
 
@@ -6,7 +10,7 @@ alias mkdir='mkdir -p -v'
 
 # safety
 alias mv='mv -iv'
-alias rm='rm -v'
+alias rm='rm -dv'
 alias cp='cp -iR' #also recursive
 alias ln='ln -i'
 
@@ -76,12 +80,3 @@ alias sudo='sudo '
 alias ":w"="echo This isn\'t vim, silly."
 alias ":q"="echo This isn\'t vim, silly."
 alias ":wq"="echo This isn\'t vim, silly."
-
-function texc {
-  pdflatex -halt-on-error -file-line-error -output-directory=$(dirname "$1") "$1"
-}
-
-# grep color
-alias grep=ggrep --color=always
-
-alias rg="rg -g '!__files'"
