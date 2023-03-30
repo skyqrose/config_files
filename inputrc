@@ -1,4 +1,0 @@
-# For bash
-#
-# Make tab completion show results immediately instead of having to hit tab twice
-set show-all-if-ambiguous on
