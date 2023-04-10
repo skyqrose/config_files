@@ -16,6 +16,7 @@
   name = Sky Rose
 [push]
   default = current
+  autoSetupRemote = true
 [core]
   editor = nvim
   excludesfile = ~/git/config_files/gitignore_global
@@ -27,3 +28,9 @@
   autostash = true
 [pull]
   rebase = false
+[init]
+  defaultBranch = main
+[fetch]
+  prune = true
+[diff]
+  colorMoved = default
