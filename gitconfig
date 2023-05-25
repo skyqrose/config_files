@@ -7,6 +7,7 @@
   aa = add -A
   cm = commit
   co = checkout
+  cp = cherry-pick
   r = rebase -i
   hide = update-index --assume-unchanged
   unhide = update-index --no-assume-unchanged
