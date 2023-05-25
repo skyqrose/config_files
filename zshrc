@@ -40,3 +40,9 @@ punctuation='%F{blue}%#%f '
 PROMPT=$'\n'"$name_if_privileged$pink_on_fail$time$num_jobs$pink_on_fail$dir$punctuation"
 
 RPROMPT='%0(?..[%F{yellow}%?%f])' # [$?] on failure
+
+# asdf
+# source $(brew --prefix asdf)/libexec/asdf.sh
+export ASDF_DIR
+ASDF_DIR=/usr/local/opt/asdf/libexec/
+PATH="${ASDF_DIR}bin:/Users/srose/.asdf/shims:$PATH"
