@@ -6,3 +6,6 @@
 .*.swp
 .swp
 # I could add .swo files, but I'd rather let git status yell at me if I accidentally make one.
+#
+.DS_STORE
+**/.DS_STORE
