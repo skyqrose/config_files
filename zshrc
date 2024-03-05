@@ -8,6 +8,14 @@ setopt appendhistory autocd extendedglob nomatch notify
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
+
+# brew (do before compinit, for autocomplete)
+PATH="/opt/homebrew/bin:$PATH"
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '~/.zshrc'
 
@@ -42,7 +50,6 @@ PROMPT=$'\n'"$name_if_privileged$pink_on_fail$time$num_jobs$pink_on_fail$dir$pun
 RPROMPT='%0(?..[%F{yellow}%?%f])' # [$?] on failure
 
 # asdf
-# source $(brew --prefix asdf)/libexec/asdf.sh
-export ASDF_DIR
-ASDF_DIR=/usr/local/opt/asdf/libexec/
-PATH="${ASDF_DIR}bin:/Users/srose/.asdf/shims:$PATH"
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# mise
+eval "$(mise activate zsh)"
