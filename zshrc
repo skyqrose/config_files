@@ -53,3 +53,5 @@ RPROMPT='%0(?..[%F{yellow}%?%f])' # [$?] on failure
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 # mise
 eval "$(mise activate zsh)"
+# direnv
+eval "$(direnv hook zsh)"
