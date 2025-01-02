@@ -1,5 +1,6 @@
 [alias]
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+  branches = ! git for-each-ref --color=always --sort=-committerdate --format=\"%(color:reset)%(refname:short)|%(color:blue)%(authorname)|%(color:green)%(authordate:relative)\" refs/heads refs/remotes | column  -t -s='|'
   b = branch
   s = status
   st = stash
@@ -35,3 +36,5 @@
   prune = true
 [diff]
   colorMoved = default
+[branch]
+  sort = -committerdate
