@@ -36,6 +36,9 @@ function histgrep() {
   grep --text $* $zsh_command_log
 }
 
+# fix delete key
+bindkey "^[[3~" delete-char
+bindkey -a "^[[3~" delete-char
 
 # The prompt
 autoload -U colors && colors #enable colors
